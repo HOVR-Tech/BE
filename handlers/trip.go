@@ -8,12 +8,13 @@ import (
 	"encoding/json"
 	"net/http"
 	"strconv"
+	"os"
 
 	"github.com/go-playground/validator/v10"
 	"github.com/gorilla/mux"
 )
 
-var Path_File = "https://be-production-f447.up.railway.app/uploads/"
+var Path_File = os.Getenv("PATH_FILE")
 
 type handlerTrip struct {
 	TripRepository repositories.TripRepository
