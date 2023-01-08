@@ -13,7 +13,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-var Path_File = "http://localhost:5000/uploads/"
+var Path_File = "https://be-production-f447.up.railway.app/uploads/"
 
 type handlerTrip struct {
 	TripRepository repositories.TripRepository
