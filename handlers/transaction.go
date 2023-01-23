@@ -210,11 +210,11 @@ func (h *handlerTransaction) Notification(w http.ResponseWriter, r *http.Request
 			SendEmail("pending", transaction)
 			h.TransactionRepository.Notification("pending", transaction.ID)
 		} else if fraudStatus == "accept" {
-			SendEmail("Waiting Approval", transaction)
-			h.TransactionRepository.Notification("Waiting Approval", transaction.ID)
+			SendEmail("Approved", transaction)
+			h.TransactionRepository.Notification("Approved", transaction.ID)
 		} else if transactionStatus == "settlement" {
-			SendEmail("Waiting Approval", transaction)
-			h.TransactionRepository.Notification("Waiting Approval", transaction.ID)
+			SendEmail("Approved", transaction)
+			h.TransactionRepository.Notification("Approved", transaction.ID)
 		} else if transactionStatus == "deny" {
 			SendEmail("failed", transaction)
 			h.TransactionRepository.Notification("failed", transaction.ID)
